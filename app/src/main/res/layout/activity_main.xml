@@ -8,13 +8,14 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="0dp"
             android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -45,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="624dp" />
+            app:layout_constraintGuide_begin="1139dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -53,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="The Drunken Poet"
-            app:layout_constraintEnd_toStartOf="@+id/textView10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -64,7 +65,7 @@
             android:layout_marginTop="8dp"
             android:text="65 Peel St. West Melbourne VIC 3003"
             android:textSize="10sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -85,7 +86,7 @@
             android:layout_marginTop="8dp"
             android:text="Following"
             android:textSize="10sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -96,8 +97,7 @@
             android:layout_marginTop="8dp"
             android:text="Followers"
             android:textSize="10sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView10"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -216,20 +216,31 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="212dp"
-            android:layout_height="255dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="0dp"
+            android:layout_height="348dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-        <android.support.constraint.Barrier
-            android:id="@+id/barrier2"
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:barrierDirection="left"
-            app:constraint_referenced_ids="textView10"
-            tools:layout_editor_absoluteX="411dp" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="157dp"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20" />
 
 
     </android.support.constraint.ConstraintLayout>
